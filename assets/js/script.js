@@ -1,17 +1,18 @@
-window.onload = onLoad();
+/**
+ * Define variables to be used
+ */
+let choices = document.getElementsByClassName('choice');
+let computerChoice;
+let playerChoice;
+let result;
+let playerScore;
+let playerLives;
 
-function onLoad() {
-    let start = document.getElementById('start');
-    let rule = document.getElementById('rules');
-
-    start.innerHTML = "Click one of the images to make a choice!";
-    rule.innerHTML = "For full rules see below the game area"
-};
-
-let choice = document.getElementsByClassName('choice');
-for (let choices of choice) {
-    choices.addEventListener('click', function() {
-        let playerChoice = this.id;
+for (let choice of choices) {
+    choice.addEventListener('click', function() {
+        playerChoice = this.innerHTML;
         console.log(playerChoice);
+        runGame(playerChoice);
     })
 }
+
