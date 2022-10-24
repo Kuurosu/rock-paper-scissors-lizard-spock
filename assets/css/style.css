@@ -39,6 +39,17 @@ h1 {
 .submit {
     display: flex;
     margin: auto;
+    margin-top: 25px;
     width: 10%;
     justify-content: center;
+}
+
+#points-lives {
+    display: flex;
+    flex-direction: row;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
 }
