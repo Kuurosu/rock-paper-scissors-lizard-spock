@@ -127,7 +127,7 @@ function gameOver() {
     document.getElementById('rules').innerHTML = `Your final score is: ${playerScore}!`;
 
     resetChoices();
-}
+};
 
 function resetChoices() {
     let reset = document.createElement('button');
@@ -136,4 +136,33 @@ function resetChoices() {
     reset.appendChild(resetText);
     let section = document.getElementById('reset-func');
     section.appendChild(reset);
+    let resetbtn = document.getElementById('reset');
+    resetbtn.addEventListener('click', function(){
+        document.getElementById('start').innerHTML = "Click one of the images to make a choice!";
+        document.getElementById('rules').innerHTML = "For full rules see below the game area";
+
+        document.getElementById('reset').remove();
+
+        resetGame();
+    });
+};
+
+function resetGame() {
+    playerLives = 3;
+    document.getElementById('lives').innerHTML = 3;
+    playerScore = 0;
+    document.getElementById('score').innerHTML = 0;
+
+    document.getElementById('rock').disabled = false;
+    document.getElementById('paper').disabled = false;
+    document.getElementById('scissors').disabled = 
+    false;
+    document.getElementById('lizard').disabled = false;
+    document.getElementById('spock').disabled = false;
+
+    document.getElementById('player-choice').innerHTML = "";
+    document.getElementById('computer-choice').innerHTML = "";
+    document.getElementById('result').innerHTML = "";
 }
+
+
