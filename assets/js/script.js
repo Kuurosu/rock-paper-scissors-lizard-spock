@@ -113,6 +113,57 @@ function checkWinner() {
             playerLives -= 1;
             return "You Lose! Spock smashes Scissors!";
         }
+    } else if (player == "Paper") {
+        if (computer == "Rock") {
+            playerScore += 1;
+            return "You Win! Paper covers Rock!";
+        }
+        else if (computer == "Scissors") {
+            playerLives -= 1;
+            return "You Lose! Scissors cut Paper!";
+        }
+        else if (computer == "Lizard") {
+            playerLives -= 1;
+            return "You Lose! Lizard eats Paper!";
+        }
+        else if (computer == "Spock") {
+            playerScore += 1;
+            return "You Win! Paper dispoves Spock!";
+        }
+    } else if (player == "Lizard") {
+        if (computer == "Rock") {
+            playerLives -= 1;
+            return "You Lose! Rock crushes Lizard!";
+        }
+        else if (computer == "Paper") {
+            playerScore += 1;
+            return "You Win! Lizard eats Paper!";
+        }
+        else if (computer == "Scissors") {
+            playerLives -= 1;
+            return "You Lose! Scissors decapitate Lizard!";
+        }
+        else if (computer == "Spock") {
+            playerScore += 1;
+            return "You Win! Lizard poisons Spock!";
+        }
+    } else if (player == "Spock") {
+        if (computer == "Rock") {
+            playerScore += 1;
+            return "You Win! Spock vaporises Rock!";
+        }
+        else if (computer == "Paper") {
+            playerLives -= 1;
+            return "You Lose! Paper disproves Spock!";
+        }
+        else if (computer == "Scissors") {
+            playerScore += 1;
+            return "You Win! Spock smashes Scissors!";
+        }
+        else if (computer == "Lizard") {
+            playerLives -= 1;
+            return "You Lose! Lizard poisons Spock!";
+        }
     }
 };
 
