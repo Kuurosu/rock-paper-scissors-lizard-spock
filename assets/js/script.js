@@ -41,6 +41,10 @@ function runGame(player) {
 
     document.getElementById('score').innerHTML = playerScore;
     document.getElementById('lives').innerHTML = playerLives;
+
+    if (playerLives < 1) {
+        gameOver();
+    }
 };
 
 /**
@@ -111,3 +115,25 @@ function checkWinner() {
         }
     }
 };
+
+function gameOver() {
+    document.getElementById('rock').disabled = true;
+    document.getElementById('paper').disabled = true;
+    document.getElementById('scissors').disabled = true;
+    document.getElementById('lizard').disabled = true;
+    document.getElementById('spock').disabled = true;
+
+    document.getElementById('start').innerHTML = "Game Over! You ran out of lives!";
+    document.getElementById('rules').innerHTML = `Your final score is: ${playerScore}!`;
+
+    resetChoices();
+}
+
+function resetChoices() {
+    let reset = document.createElement('button');
+    reset.setAttribute("id", "reset");
+    let resetText = document.createTextNode("Play Again?");
+    reset.appendChild(resetText);
+    let section = document.getElementById('reset-func');
+    section.appendChild(reset);
+}
