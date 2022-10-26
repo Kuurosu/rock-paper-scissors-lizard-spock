@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 :root {
-    --background-primary: #333;
+    --background-primary: rgb(58, 58, 91);
     --font-color: rgb(225, 225, 225);
 }
 
@@ -12,17 +12,48 @@
 body {
     font-family: 'Kanit', sans-serif;
     text-align: center;
-    background-color: var(--background-primary);
+    background-image: url('/assets/images/space.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     color: var(--font-color);
+    background-color: rgb(0, 11, 68);
 }
 
 h1 {
     font-size: 2.5rem;
+    background-color: var(--background-primary);
+    width: fit-content;
+    padding: 20px;
+    margin: auto;
+    line-height: 2.5rem;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: -5px;
+}
+
+#rules {
+    font-size: 1.5rem;
 }
 
 #game-area {
-    width: 90%;
+    width: fit-content;
     margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--background-primary);
+}
+
+#points-lives {
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--background-primary);
 }
 
 #game-area h1 h2{
@@ -32,7 +63,7 @@ h1 {
 }
 
 .choice {
-    width: 15%;
+    width: 15vw;
 }
 
 .submit {
@@ -62,11 +93,29 @@ h1 {
     flex-direction: column;
     margin-top: 20px;
     gap: 15px;
+    font-size: 1.25rem;
+}
+
+#points-lives {
+    font-size: 1.5rem;
 }
 
 #reset {
-    width: 20%;
+    min-width: fit-content;
+    width: 12vw;
     height: auto;
+    padding: 10px 15px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 15px;
+    border-style: none;
+    
+    color: var(--font-color);
+    background-color: rgb(7, 43, 73);
+}
+
+#reset-func {
+    margin-bottom: 20px;
 }
 
 #rock {
@@ -74,7 +123,7 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 6rem;
+    height: 6vw;
     border: none;
 }
 
@@ -83,7 +132,7 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 6rem;
+    height: 6vw;
     border: none;
 }
 
@@ -92,7 +141,7 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 6rem;
+    height: 6vw;
     border: none;
 }
 
@@ -101,7 +150,7 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 6rem;
+    height: 6vw;
     border: none;
 }
 
@@ -110,24 +159,64 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 6rem;
+    height: 6vw;
     border: none;
 }
 
 @media screen and (max-width: 500px) {
+    h1 {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+
+    h2 {
+        margin-top: -5px;
+    }
+
     .button-area {
         display: block;
         margin: auto;
+        margin-top: -10px;
     }
 
     .button-area > button {
-        display: flex;
-        flex-direction: row;
         justify-content: center;
         margin: auto;
     }
 
     .choice {
-        width: 30vw;
+        width: 25vw;
+    }
+
+    .result {
+        margin-top: 10px;
+    }
+
+    #reset {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        background-size: auto;
+    }
+
+    #rock,
+    #paper,
+    #scissors,
+    #lizard,
+    #spock {
+        height: 10vh;
+    }
+
+    #reset {
+        padding: 15px;
+    }
+}
+
+@media screen and (min-width: 5120px) {
+    #game-area {
+        width: 50%;
     }
 }
