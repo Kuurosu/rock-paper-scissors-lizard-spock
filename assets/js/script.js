@@ -17,9 +17,9 @@ for (let choice of choices) {
     choice.addEventListener('click', function() {
         player = this.innerHTML;
         console.log(player);
-        runGame(player);
+        runGame();
     });
-};
+}
 
 
 /**
@@ -31,7 +31,7 @@ for (let choice of choices) {
  * @param {} player 
  */
 
-function runGame(player) {
+function runGame() {
     playerChoice.textContent = `You chose: ${player}`; 
 
     computerRandomNumber();
@@ -45,7 +45,7 @@ function runGame(player) {
     if (playerLives < 1) {
         gameOver();
     }
-};
+}
 
 /**
  * This creates the random 1-5 and uses switch to assign it the string of choice.
@@ -69,8 +69,8 @@ function computerRandomNumber() {
         case 5:
             computer = "Spock";
             break;
-    };
-};
+    }
+}
 
 /**
  * This checks the playerChoice to computerChoice and finds out which one won and if the score should be incremented or lives be decremented
@@ -165,7 +165,7 @@ function checkWinner() {
             return "You Lose! Lizard poisons Spock!";
         }
     }
-};
+}
 
 function gameOver() {
     document.getElementById('rock').disabled = true;
@@ -178,7 +178,7 @@ function gameOver() {
     document.getElementById('rules').innerHTML = `Your final score is: ${playerScore}!`;
 
     resetChoices();
-};
+}
 
 function resetChoices() {
     let reset = document.createElement('button');
@@ -196,7 +196,7 @@ function resetChoices() {
 
         resetGame();
     });
-};
+}
 
 function resetGame() {
     playerLives = 3;
