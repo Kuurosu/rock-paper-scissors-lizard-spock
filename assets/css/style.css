@@ -21,8 +21,7 @@ h1 {
 }
 
 #game-area {
-    border: 5px solid red;
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
@@ -33,7 +32,7 @@ h1 {
 }
 
 .choice {
-    width: 10%;
+    width: 15%;
 }
 
 .submit {
@@ -66,5 +65,69 @@ h1 {
 }
 
 #reset {
-    width: 10%;
+    width: 20%;
+    height: auto;
+}
+
+#rock {
+    background: url('/assets/images/rock.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 6rem;
+    border: none;
+}
+
+#paper {
+    background: url('/assets/images/paper.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 6rem;
+    border: none;
+}
+
+#scissors {
+    background: url('/assets/images/scissors.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 6rem;
+    border: none;
+}
+
+#lizard {
+    background: url('/assets/images/lizard.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 6rem;
+    border: none;
+}
+
+#spock {
+    background: url('/assets/images/spock.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 6rem;
+    border: none;
+}
+
+@media screen and (max-width: 500px) {
+    .button-area {
+        display: block;
+        margin: auto;
+    }
+
+    .button-area > button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .choice {
+        width: 30vw;
+    }
 }
