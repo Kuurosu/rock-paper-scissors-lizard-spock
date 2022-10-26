@@ -187,10 +187,16 @@ h2 {
     .button-area > button {
         justify-content: center;
         margin: auto;
+        margin-top: 1vh;
+    }
+
+    .button-area > button:nth-child(4),
+    .button-area > button:nth-child(5) {
+        margin-top: 5vh;
     }
 
     .choice {
-        width: 25vw;
+        width: 28vw;
     }
 
     .result {
