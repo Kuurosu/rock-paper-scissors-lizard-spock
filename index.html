@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A game website to play rock, paper, scissors, lizard, spock">
+    <meta name="keywords" content="rock, paper, scissors, lizard, spock, game">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Rock Paper Scissor Lizard Spock!</title>
 </head>
@@ -14,11 +16,11 @@
         <h3 id="rules">For full rules see below the game area</h3>
         <div id="reset-func"></div>
         <div class="button-area">
-            <button class="choice" id="rock">Rock</button>
-            <button class="choice" id="paper">Paper</button>
-            <button class="choice" id="scissors">Scissors</button>
-            <button class="choice" id="lizard">Lizard</button>
-            <button class="choice" id="spock">Spock</button>
+            <button class="choice" id="rock" aria-label="button choice for rock">Rock</button>
+            <button class="choice" id="paper" aria-label="button choice for paper">Paper</button>
+            <button class="choice" id="scissors" aria-label="button choice for scissors">Scissors</button>
+            <button class="choice" id="lizard" aria-label="button choice for lizard">Lizard</button>
+            <button class="choice" id="spock" aria-label="button choice for spock">Spock</button>
         </div>
         <div class="result">
             <span id="player-choice"></span>
@@ -33,6 +35,15 @@
         <div class="counters">
             <p>Score: <span id="score">0</span></p>
         </div>
+    </section>
+    <section class="rules-desc">
+        <div>
+            <h2>How to play!</h2>
+            <p>The rules: "Scissors decapitate Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock
+            smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it
+            always has, rock crushes scissors."</p>
+        </div>
+        <div><img src="/media/test.png" alt="" srcset=""></div>
     </section>
     <script src="assets/js/script.js"></script>
 </body>
