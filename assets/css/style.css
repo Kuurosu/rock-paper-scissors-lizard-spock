@@ -64,6 +64,7 @@ h2 {
 
 .choice {
     width: 15vw;
+    color: rgba(0, 0, 0, 0);
 }
 
 .submit {
@@ -93,6 +94,21 @@ h2 {
     flex-direction: column;
     margin-top: 20px;
     gap: 15px;
+    font-size: 1.25rem;
+}
+
+#rules-desc {
+    background-color: var(--background-primary);
+    margin-top: 20px;
+    width: fit-content;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#rules-desc p {
+    max-width: 80vw;
     font-size: 1.25rem;
 }
 
