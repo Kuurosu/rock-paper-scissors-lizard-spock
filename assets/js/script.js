@@ -34,11 +34,16 @@ function displayResult(playerChoice) {
     let playerImg = document.createElement('img');
     playerImg.src = 'assets/images/' + player.toLowerCase() + '.png';
     playerImg.setAttribute('id', 'current-image');
-    playerChoice.innerHTML = '';
+    playerChoice.innerHTML = 'You chose: ';
     playerChoice.appendChild(playerImg);
 
     let computerCount = getComputerCharacter();
     computerChoice.textContent = `Computer chose: ${computerCount}`;
+    let computerImg = document.createElement('img');
+    computerImg.src = 'assets/images/' + computerCount.toLowerCase() + '.png';
+    computerImg.setAttribute('id', 'computer-image');
+    computerChoice.innerHTML = 'Computer chose: ';
+    computerChoice.appendChild(computerImg);
 
     resultText.textContent = checkWinner(player, computerCount);
 
