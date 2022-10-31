@@ -1,12 +1,11 @@
 /**
  * Define variables to be used
  */
-let choices = document.getElementsByClassName('choice');
-let computerChoice = document.getElementById('computer-choice');
-let playerChoice = document.getElementById('player-choice');
-let resultText = document.getElementById('result');
+const choices = document.getElementsByClassName('choice');
+const computerChoice = document.getElementById('computer-choice');
+const playerChoice = document.getElementById('player-choice');
+const resultText = document.getElementById('result');
 let player;
-let computer;
 let playerScore = 0;
 let playerLives = 3;
 
@@ -17,10 +16,9 @@ for (let choice of choices) {
     choice.addEventListener('click', function() {
         player = this.innerHTML;
         console.log(player);
-        runGame();
+        displayResult(playerChoice);
     });
 }
-
 
 /**
  * This takes the player from the event listener and assigns it to the function.
@@ -31,13 +29,18 @@ for (let choice of choices) {
  * @param {} player 
  */
 
-function runGame() {
-    playerChoice.textContent = `You chose: ${player}`; 
+function displayResult(playerChoice) {
+    // playerChoice.textContent = `You chose: ${player}`;
+    let playerImg = document.createElement('img');
+    playerImg.src = 'assets/images/' + player.toLowerCase() + '.png';
+    playerImg.setAttribute('id', 'current-image');
+    playerChoice.innerHTML = '';
+    playerChoice.appendChild(playerImg);
 
-    computerRandomNumber();
-    computerChoice.textContent = `Computer chose: ${computer}`;
+    let computerCount = getComputerCharacter();
+    computerChoice.textContent = `Computer chose: ${computerCount}`;
 
-    resultText.textContent = checkWinner();
+    resultText.textContent = checkWinner(player, computerCount);
 
     document.getElementById('score').innerHTML = playerScore;
     document.getElementById('lives').innerHTML = playerLives;
@@ -50,119 +53,122 @@ function runGame() {
 /**
  * This creates the random 1-5 and uses switch to assign it the string of choice.
  */
-function computerRandomNumber() {
+function getComputerCharacter() {
     let compRandom = Math.floor(Math.random() * 5) + 1;
     console.log(compRandom);
+    let computerChoice;
     switch(compRandom) {
         case 1:
-            computer = "Rock";
+            computerChoice = 'Rock';
             break;
         case 2:
-            computer = "Paper";
+            computerChoice = 'Paper';
             break;
         case 3:
-            computer = "Scissors";
+            computerChoice = 'Scissors';
             break;
         case 4:
-            computer = "Lizard";
+            computerChoice = 'Lizard';
             break;
         case 5:
-            computer = "Spock";
+            computerChoice = 'Spock';
             break;
     }
+
+    return computerChoice;
 }
 
 /**
  * This checks the playerChoice to computerChoice and finds out which one won and if the score should be incremented or lives be decremented
  * @returns result
  */
-function checkWinner() {
-    if (player == computer) {
-        return "Draw! Go again!";
-    } else if (player == "Rock") {
-        if (computer == "Scissors") {
+function checkWinner(player, computerCount) {
+    if (player == computerCount) {
+        return 'Draw! Go again!';
+    } else if (player == 'Rock') {
+        if (computerCount == 'Scissors') {
             playerScore += 1;
-            return "You Win! Rock crushes Scissors!";
+            return 'You Win! Rock crushes Scissors!';
         }
-        else if (computer == "Paper") {
+        else if (computerCount == 'Paper') {
             playerLives -= 1;
-            return "You Lose! Paper covers Rock!";
+            return 'You Lose! Paper covers Rock!';
         }
-        else if (computer == "Lizard") {
+        else if (computerCount == 'Lizard') {
             playerScore += 1;
-            return "You Win! Rock crushes Lizard!";
+            return 'You Win! Rock crushes Lizard!';
         }
-        else if (computer == "Spock") {
+        else if (computerCount == 'Spock') {
             playerLives -= 1;
-            return "You Lose! Spock vaporises Rock";
+            return 'You Lose! Spock vaporises Rock';
         }
-    } else if (player == "Scissors") {
-        if (computer == "Rock") {
+    } else if (player == 'Scissors') {
+        if (computerCount == 'Rock') {
             playerLives -= 1;
-            return "You Lose! Rock crushes Scissors!";
+            return 'You Lose! Rock crushes Scissors!';
         }
-        else if (computer == "Paper") {
+        else if (computerCount == 'Paper') {
             playerScore += 1;
-            return "You Win! Scissors cuts Paper!";
+            return 'You Win! Scissors cuts Paper!';
         }
-        else if (computer == "Lizard") {
+        else if (computerCount == 'Lizard') {
             playerScore += 1;
-            return "You Win! Scissors decapitates Lizard!";
+            return 'You Win! Scissors decapitates Lizard!';
         }
-        else if (computer == "Spock") {
+        else if (computerCount == 'Spock') {
             playerLives -= 1;
-            return "You Lose! Spock smashes Scissors!";
+            return 'You Lose! Spock smashes Scissors!';
         }
-    } else if (player == "Paper") {
-        if (computer == "Rock") {
+    } else if (player == 'Paper') {
+        if (computerCount == 'Rock') {
             playerScore += 1;
-            return "You Win! Paper covers Rock!";
+            return 'You Win! Paper covers Rock!';
         }
-        else if (computer == "Scissors") {
+        else if (computerCount == 'Scissors') {
             playerLives -= 1;
-            return "You Lose! Scissors cut Paper!";
+            return 'You Lose! Scissors cut Paper!';
         }
-        else if (computer == "Lizard") {
+        else if (computerCount == 'Lizard') {
             playerLives -= 1;
-            return "You Lose! Lizard eats Paper!";
+            return 'You Lose! Lizard eats Paper!';
         }
-        else if (computer == "Spock") {
+        else if (computerCount == 'Spock') {
             playerScore += 1;
-            return "You Win! Paper dispoves Spock!";
+            return 'You Win! Paper dispoves Spock!';
         }
-    } else if (player == "Lizard") {
-        if (computer == "Rock") {
+    } else if (player == 'Lizard') {
+        if (computerCount == 'Rock') {
             playerLives -= 1;
-            return "You Lose! Rock crushes Lizard!";
+            return 'You Lose! Rock crushes Lizard!';
         }
-        else if (computer == "Paper") {
+        else if (computerCount == 'Paper') {
             playerScore += 1;
-            return "You Win! Lizard eats Paper!";
+            return 'You Win! Lizard eats Paper!';
         }
-        else if (computer == "Scissors") {
+        else if (computerCount == 'Scissors') {
             playerLives -= 1;
-            return "You Lose! Scissors decapitate Lizard!";
+            return 'You Lose! Scissors decapitate Lizard!';
         }
-        else if (computer == "Spock") {
+        else if (computerCount == 'Spock') {
             playerScore += 1;
-            return "You Win! Lizard poisons Spock!";
+            return 'You Win! Lizard poisons Spock!';
         }
-    } else if (player == "Spock") {
-        if (computer == "Rock") {
+    } else if (player == 'Spock') {
+        if (computerCount == 'Rock') {
             playerScore += 1;
-            return "You Win! Spock vaporises Rock!";
+            return 'You Win! Spock vaporises Rock!';
         }
-        else if (computer == "Paper") {
+        else if (computerCount == 'Paper') {
             playerLives -= 1;
-            return "You Lose! Paper disproves Spock!";
+            return 'You Lose! Paper disproves Spock!';
         }
-        else if (computer == "Scissors") {
+        else if (computerCount == 'Scissors') {
             playerScore += 1;
-            return "You Win! Spock smashes Scissors!";
+            return 'You Win! Spock smashes Scissors!';
         }
-        else if (computer == "Lizard") {
+        else if (computerCount == 'Lizard') {
             playerLives -= 1;
-            return "You Lose! Lizard poisons Spock!";
+            return 'You Lose! Lizard poisons Spock!';
         }
     }
 }
@@ -177,7 +183,7 @@ function gameOver() {
     document.getElementById('lizard').disabled = true;
     document.getElementById('spock').disabled = true;
 
-    document.getElementById('start').innerHTML = "Game Over! You ran out of lives!";
+    document.getElementById('start').innerHTML = 'Game Over! You ran out of lives!';
     document.getElementById('rules').innerHTML = `Your final score is: ${playerScore}!`;
 
     resetChoices();
@@ -188,15 +194,15 @@ function gameOver() {
  */
 function resetChoices() {
     let reset = document.createElement('button');
-    reset.setAttribute("id", "reset");
-    let resetText = document.createTextNode("Play Again?");
+    reset.setAttribute('id', 'reset');
+    let resetText = document.createTextNode('Play Again?');
     reset.appendChild(resetText);
     let section = document.getElementById('reset-func');
     section.appendChild(reset);
     let resetbtn = document.getElementById('reset');
     resetbtn.addEventListener('click', function(){
-        document.getElementById('start').innerHTML = "Click one of the images to make a choice!";
-        document.getElementById('rules').innerHTML = "For full rules see below the game area";
+        document.getElementById('start').innerHTML = 'Click one of the images to make a choice!';
+        document.getElementById('rules').innerHTML = 'For full rules see below the game area';
 
         document.getElementById('reset').remove();
 
@@ -220,9 +226,9 @@ function resetGame() {
     document.getElementById('lizard').disabled = false;
     document.getElementById('spock').disabled = false;
 
-    document.getElementById('player-choice').innerHTML = "";
-    document.getElementById('computer-choice').innerHTML = "";
-    document.getElementById('result').innerHTML = "";
+    document.getElementById('player-choice').innerHTML = '';
+    document.getElementById('computer-choice').innerHTML = '';
+    document.getElementById('result').innerHTML = '';
 }
 
 
