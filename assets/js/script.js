@@ -167,6 +167,9 @@ function checkWinner() {
     }
 }
 
+/**
+ * Disables all the button input. Effectively pausing the game unless the resetChoices is run.
+ */
 function gameOver() {
     document.getElementById('rock').disabled = true;
     document.getElementById('paper').disabled = true;
@@ -180,6 +183,9 @@ function gameOver() {
     resetChoices();
 }
 
+/**
+ * Creates a Play Again button which also replaces the instructions above the buttons.
+ */
 function resetChoices() {
     let reset = document.createElement('button');
     reset.setAttribute("id", "reset");
@@ -198,6 +204,9 @@ function resetChoices() {
     });
 }
 
+/**
+ * Resets the lives back to 3 and score to 0. Also re-enables all the buttons.
+ */
 function resetGame() {
     playerLives = 3;
     document.getElementById('lives').innerHTML = 3;
