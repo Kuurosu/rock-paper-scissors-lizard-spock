@@ -130,6 +130,11 @@ h2 {
     background-color: rgb(7, 43, 73);
 }
 
+#reset:hover {
+    color: rgb(7, 43, 73);
+    background-color: var(--font-color);
+}
+
 #reset-func {
     margin-bottom: 20px;
 }
