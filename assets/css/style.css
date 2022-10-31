@@ -64,6 +64,7 @@ h2 {
 
 .choice {
     width: 15vw;
+    min-height: 15vh;
     color: rgba(0, 0, 0, 0);
 }
 
@@ -176,7 +177,7 @@ h2 {
 }
 
 #spock {
-    background: url('/assets/images/spock.png');
+    background: url('/assets/images/spock2.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -243,7 +244,8 @@ h2 {
     #scissors,
     #lizard,
     #spock {
-        height: 10vh;
+        min-height: 10vh;
+        width: 16vh;
     }
 
     #reset {
@@ -254,5 +256,14 @@ h2 {
 @media screen and (min-width: 5120px) {
     #game-area {
         width: 50%;
+    }
+
+    #rock,
+    #paper,
+    #scissors,
+    #lizard,
+    #spock {
+        min-height: 10vh;
+        width: 16vh;
     }
 }
