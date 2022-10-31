@@ -185,6 +185,14 @@ h2 {
     border: none;
 }
 
+#rock:hover,
+#paper:hover,
+#scissors:hover,
+#lizard:hover,
+#spock:hover {
+    border: 10px solid;
+}
+
 @media screen and (max-width: 500px) {
     h1 {
         font-size: 1.5rem;
