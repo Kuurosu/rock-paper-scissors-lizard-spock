@@ -212,7 +212,8 @@ h2 {
 #computer-choice {
     display: flex;
     flex-flow: column;
-    width: fit-content;
+    width: 14vw;
+    min-height: 14vh;
     margin: auto;
 }
 
@@ -254,6 +255,7 @@ h2 {
 
     .choice-result {
         margin-top: 10px;
+        font-size: 1rem;
     }
 
     #reset {
@@ -262,6 +264,19 @@ h2 {
 
     #reset-func {
         margin-bottom: 0;
+    }
+
+    #player-choice,
+    #computer-choice {
+        display: block;
+        width: 25vw;
+        min-width: 15vw;
+        min-height: fit-content;
+    }
+
+    #result {
+        margin-top: 0;
+        margin-bottom: 15px;
     }
 }
 
