@@ -111,6 +111,7 @@ h2 {
     border-radius: 10px;
     margin: auto;
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 20px;
 }
 
@@ -314,6 +315,28 @@ h2 {
 }
 
 @media screen and (min-width: 5120px) {
+    h1 {
+        font-size: 4rem;
+        padding: 30px;
+    }
+
+    #start {
+        font-size: 3rem;
+    }
+
+    #rules,
+    #points-lives,
+    #player-choice,
+    #computer-choice,
+    #result,
+    #rules-header {
+        font-size: 2.5rem;
+    }
+
+    #rules-desc > div > p {
+        font-size: 2rem;
+    }
+
     #game-area {
         width: 50%;
     }
