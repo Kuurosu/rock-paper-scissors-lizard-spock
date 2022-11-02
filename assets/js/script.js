@@ -13,7 +13,7 @@ let playerLives = 3;
  * Event Listener to listen for which button gets clicked. Then runs the game.
  */
 for (let choice of choices) {
-    choice.addEventListener('click', function() {
+    choice.addEventListener('click', function () {
         player = this.innerHTML;
         console.log(player);
         displayResult(playerChoice);
@@ -62,7 +62,7 @@ function getComputerCharacter() {
     let compRandom = Math.floor(Math.random() * 5) + 1;
     console.log(compRandom);
     let computerChoice;
-    switch(compRandom) {
+    switch (compRandom) {
         case 1:
             computerChoice = 'Rock';
             break;
@@ -94,16 +94,13 @@ function checkWinner(player, computerCount) {
         if (computerCount == 'Scissors') {
             playerScore += 1;
             return 'You Win! Rock crushes Scissors!';
-        }
-        else if (computerCount == 'Paper') {
+        } else if (computerCount == 'Paper') {
             playerLives -= 1;
             return 'You Lose! Paper covers Rock!';
-        }
-        else if (computerCount == 'Lizard') {
+        } else if (computerCount == 'Lizard') {
             playerScore += 1;
             return 'You Win! Rock crushes Lizard!';
-        }
-        else if (computerCount == 'Spock') {
+        } else if (computerCount == 'Spock') {
             playerLives -= 1;
             return 'You Lose! Spock vaporises Rock';
         }
@@ -111,16 +108,13 @@ function checkWinner(player, computerCount) {
         if (computerCount == 'Rock') {
             playerLives -= 1;
             return 'You Lose! Rock crushes Scissors!';
-        }
-        else if (computerCount == 'Paper') {
+        } else if (computerCount == 'Paper') {
             playerScore += 1;
             return 'You Win! Scissors cuts Paper!';
-        }
-        else if (computerCount == 'Lizard') {
+        } else if (computerCount == 'Lizard') {
             playerScore += 1;
             return 'You Win! Scissors decapitates Lizard!';
-        }
-        else if (computerCount == 'Spock') {
+        } else if (computerCount == 'Spock') {
             playerLives -= 1;
             return 'You Lose! Spock smashes Scissors!';
         }
@@ -128,16 +122,13 @@ function checkWinner(player, computerCount) {
         if (computerCount == 'Rock') {
             playerScore += 1;
             return 'You Win! Paper covers Rock!';
-        }
-        else if (computerCount == 'Scissors') {
+        } else if (computerCount == 'Scissors') {
             playerLives -= 1;
             return 'You Lose! Scissors cut Paper!';
-        }
-        else if (computerCount == 'Lizard') {
+        } else if (computerCount == 'Lizard') {
             playerLives -= 1;
             return 'You Lose! Lizard eats Paper!';
-        }
-        else if (computerCount == 'Spock') {
+        } else if (computerCount == 'Spock') {
             playerScore += 1;
             return 'You Win! Paper dispoves Spock!';
         }
@@ -145,16 +136,13 @@ function checkWinner(player, computerCount) {
         if (computerCount == 'Rock') {
             playerLives -= 1;
             return 'You Lose! Rock crushes Lizard!';
-        }
-        else if (computerCount == 'Paper') {
+        } else if (computerCount == 'Paper') {
             playerScore += 1;
             return 'You Win! Lizard eats Paper!';
-        }
-        else if (computerCount == 'Scissors') {
+        } else if (computerCount == 'Scissors') {
             playerLives -= 1;
             return 'You Lose! Scissors decapitate Lizard!';
-        }
-        else if (computerCount == 'Spock') {
+        } else if (computerCount == 'Spock') {
             playerScore += 1;
             return 'You Win! Lizard poisons Spock!';
         }
@@ -162,16 +150,13 @@ function checkWinner(player, computerCount) {
         if (computerCount == 'Rock') {
             playerScore += 1;
             return 'You Win! Spock vaporises Rock!';
-        }
-        else if (computerCount == 'Paper') {
+        } else if (computerCount == 'Paper') {
             playerLives -= 1;
             return 'You Lose! Paper disproves Spock!';
-        }
-        else if (computerCount == 'Scissors') {
+        } else if (computerCount == 'Scissors') {
             playerScore += 1;
             return 'You Win! Spock smashes Scissors!';
-        }
-        else if (computerCount == 'Lizard') {
+        } else if (computerCount == 'Lizard') {
             playerLives -= 1;
             return 'You Lose! Lizard poisons Spock!';
         }
@@ -205,7 +190,7 @@ function resetChoices() {
     let section = document.getElementById('reset-func');
     section.appendChild(reset);
     let resetbtn = document.getElementById('reset');
-    resetbtn.addEventListener('click', function(){
+    resetbtn.addEventListener('click', function () {
         document.getElementById('start').innerHTML = 'Click one of the images to make a choice!';
         document.getElementById('rules').innerHTML = 'For full rules see below the game area';
 
@@ -226,8 +211,7 @@ function resetGame() {
 
     document.getElementById('rock').disabled = false;
     document.getElementById('paper').disabled = false;
-    document.getElementById('scissors').disabled = 
-    false;
+    document.getElementById('scissors').disabled = false;
     document.getElementById('lizard').disabled = false;
     document.getElementById('spock').disabled = false;
 
@@ -235,5 +219,3 @@ function resetGame() {
     document.getElementById('computer-choice').innerHTML = '';
     document.getElementById('result').innerHTML = '';
 }
-
-
