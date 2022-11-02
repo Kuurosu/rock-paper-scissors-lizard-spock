@@ -12,7 +12,7 @@
 body {
     font-family: 'Kanit', sans-serif;
     text-align: center;
-    background-image: url('/assets/images/space.jpg');
+    background-image: url('../assets/images/space.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
     color: var(--font-color);
@@ -141,7 +141,7 @@ h2 {
 }
 
 #rock {
-    background: url('/assets/images/rock.png');
+    background: url('../assets/images/rock.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -150,7 +150,7 @@ h2 {
 }
 
 #paper {
-    background: url('/assets/images/paper.png');
+    background: url('../assets/images/paper.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -159,7 +159,7 @@ h2 {
 }
 
 #scissors {
-    background: url('/assets/images/scissors.png');
+    background: url('../assets/images/scissors.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -168,7 +168,7 @@ h2 {
 }
 
 #lizard {
-    background: url('/assets/images/lizard.png');
+    background: url('../assets/images/lizard.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -177,7 +177,7 @@ h2 {
 }
 
 #spock {
-    background: url('/assets/images/spock.png');
+    background: url('../assets/images/spock.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
