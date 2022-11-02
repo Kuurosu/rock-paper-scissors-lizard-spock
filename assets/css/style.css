@@ -62,7 +62,7 @@ h2 {
     background-color: var(--background-primary);
 }
 
-#game-area h1 h2{
+#game-area h1 h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,7 +133,7 @@ h2 {
     font-weight: 600;
     border-radius: 15px;
     border-style: none;
-    
+
     color: var(--font-color);
     background-color: rgb(7, 43, 73);
 }
@@ -253,14 +253,14 @@ h2 {
         margin-top: 10px;
     }
 
-    .button-area > button {
+    .button-area>button {
         justify-content: center;
         margin: auto;
         margin-top: 1vh;
     }
 
-    .button-area > button:nth-child(4),
-    .button-area > button:nth-child(5) {
+    .button-area>button:nth-child(4),
+    .button-area>button:nth-child(5) {
         margin-top: 5vh;
     }
 
@@ -333,7 +333,7 @@ h2 {
         font-size: 2.5rem;
     }
 
-    #rules-desc > div > p {
+    #rules-desc>div>p {
         font-size: 2rem;
     }
 
