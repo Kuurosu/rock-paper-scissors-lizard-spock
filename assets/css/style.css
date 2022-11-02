@@ -34,6 +34,12 @@ h2 {
     margin-top: 5px;
 }
 
+#rules-header {
+    font-size: 2rem;
+    margin-top: 5px;
+    margin-bottom: -5px;
+}
+
 #rules {
     font-size: 1.5rem;
 }
@@ -229,6 +235,14 @@ h2 {
     }
 
     #rules {
+        font-size: 1rem;
+    }
+
+    #rules-header {
+        font-size: 1.5rem;
+    }
+
+    #rules-desc p {
         font-size: 1rem;
     }
 
