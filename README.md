@@ -235,7 +235,7 @@ To add updates from your local IDE to the repository you can use Git in the term
 3. Type ```git commit -m "(insert a meaningful commit message here)"``` and press enter.
 4. When you're ready to push the commits, you can do so by typing ```git push``` and press enter.
 
-## Credits
+## Credits
 
 - I'd like to thank my mentor Brian Macharia for assisting me with the format of my code and reviews.
 
