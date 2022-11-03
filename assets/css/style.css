@@ -262,6 +262,7 @@ footer {
     text-decoration: underline;
 }
 
+/* For mobile screens under 500px */
 @media screen and (max-width: 500px) {
     h1 {
         font-size: 1.5rem;
@@ -337,6 +338,7 @@ footer {
     }
 }
 
+/* For medium sized screen, small laptops and tablets under 1200px */
 @media screen and (max-width: 1200px) {
     body {
         background-size: auto;
@@ -356,6 +358,7 @@ footer {
     }
 }
 
+/* For larger screens up to 5k */
 @media screen and (min-width: 5120px) {
     h1 {
         font-size: 4rem;
