@@ -174,7 +174,8 @@ After checking with Chrome's built-in Lighthouse tool it confirms everything is 
 | Game Start    | User clicks on one of the five options presented to them  | Users choice appears below with the computers choice next to it   | PASS  | 
 | Lives and Score Counters  | User clicks on one of the options to see if the result was win/loss/draw  | Lives decrement from three by one if the player lost. Score increments by one if a win. No change made if there's a draw  | PASS | 
 Play Again    | Play Again button appears when lives reach 0 | Once the players lives reach 0 the buttons become inactive and a Game Over message appears with the players score below. A Play Again button also appears which the player can click to restart the game | PASS 
-| 404 Page  | User visits incorrect page | Website loads with no content except for a message and a link back to the homepage | PASS
+| 404 Page  | User visits incorrect page | Website loads with no content except for a message and a link back to the homepage | PASS 
+| Footer Link   | User wants to visits GitHub Page  | GitHub page opens in a new tab | PASS
 
 #### Further Testing
 
