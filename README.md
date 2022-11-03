@@ -154,3 +154,97 @@ The contrast between the font text colour and background are distinct enough to 
 
 ## Testing
 
+- I have confirmed the website works on multiple browsers including Chrome, Safari and Firefox.
+- I have confirmed it renders correctly on mobile devices.
+
+### Validator Testing
+
+I have used multiple code testers to check all three of the files.
+
+- W3C Markup Validator showed no errors and only one warning which pertained to a section not having it's own header, which I believed didn't require one.
+- W3C CSS Validation reported no errors.
+- JSHint showed no major errors and only minor recommendations. 
+
+After checking with Chrome's built-in Lighthouse tool it confirms everything is up-to-spec.
+![LightHouse Report](/media/lighthouse.png)
+
+| Test Label    | Test Action   | Expected Outcome  | Test Outcome |
+|---------------|---------------|-------------------|--------------|
+| Game Setup    | Page Loads    | Button layout shows with appropriate options to choose from   | PASS  | --------------------------------
+| Game Start    | User clicks on one of the five options presented to them  | Users choice appears below with the computers choice next to it   | PASS  | 
+| Lives and Score Counters  | User clicks on one of the options to see if the result was win/loss/draw  | Lives decrement from three by one if the player lost. Score increments by one if a win. No change made if there's a draw  | PASS | 
+Play Again    | Play Again button appears when lives reach 0 | Once the players lives reach 0 the buttons become inactive and a Game Over message appears with the players score below. A Play Again button also appears which the player can click to restart the game | PASS 
+| 404 Page  | User visits incorrect page | Website loads with no content except for a message and a link back to the homepage | PASS
+
+#### Further Testing
+
+- The hover effects on the buttons all work.
+
+## Deployment
+
+This website was developed using [VS Studio Code](https://code.visualstudio.com). It was added, committed and pushed using git to a GitHub repository.
+
+To deploy the project to GitHub Pages from [the repository](https://github.com/Kuurosu/rock-paper-scissors-lizard-spock) you can do the following:
+
+1. Log into [GitHub](https://github.com).
+2. Select the repository that you would like to deploy.
+3. Click the Settings tab.
+4. Find Pages in the left tab.
+5. Make sure it's selected on "Deploy from branch".
+6. Under Branch, Change "None" to main and Save.
+7. It may take a few minutes for GitHub to deploy the page. Once completed there will be a link to the top that will bring you to your deployed page. 
+
+### How to run the project locally
+
+If you would like to clone this repository you will need the following: 
+
+1. A [Github Account](https://github.com/).
+2. Either [Chrome](https://www.google.com/chrome/) or [Firefox](https://www.mozilla.org/en-GB/firefox/new/?redirect_source=firefox-com) as your browser.
+3. Install the Gitpod extension for your preferred browser: [Chrome](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki) or [Firefox](https://addons.mozilla.org/en-GB/firefox/addon/gitpod/).
+4. Restart your browser.
+5. Log into [Gitpod](https://gitpod.io/login/).
+6. Open the [repository](https://github.com/Kuurosu/rock-paper-scissors-lizard-spock).
+7. There will now be a Gitpod button at the top of the repository. 
+8. Click it and it will open a new tab using Gitpod and create a workstation cloned from the original repository where you can edit it locally.
+
+If you choose to use a local IDE such as VS Code etc. you can follow the steps below:
+
+1. Navigate to [GitHub CLI](https://cli.github.com).
+2. On Mac, copy ```brew install gh``` On Windows, copy ```winget install --id GitHub.cli``` (You will need [HomeBrew](https://brew.sh) previously installed for Mac, or [WinGet](https://github.com/microsoft/winget-cli) previously installed for Windows.)
+3. Paste the OS appropriate code into Terminal (Mac) or CMD prompt (Windows).
+4. This will take a few minutes to install the appropriate GitHub CLI onto your PC.
+5. Once completed, open the [repository](https://github.com/Kuurosu/rock-paper-scissors-lizard-spock).
+6. Click the green "Code" icon.
+7. Click GitHub CLI tab.
+8. Copy the link.
+9. In your preferred IDE, create or navigate to a directory you would like to clone the repository to.
+11. Open the IDE Terminal and paste the link from step 8. 
+```
+gh repo clone Kuurosu/rock-paper-scissors-lizard-spock
+```
+12. Press enter and it should clone the repository for you to work with locally. 
+
+Any issues or troubleshooting with GitHub CLI can be found [here](https://cli.github.com/manual/).
+
+### Using Git to push changes to your repository 
+
+To add updates from your local IDE to the repository you can use Git in the terminal to assist you with this:
+
+1. Open the Terminal.
+2. Type ```git add (insert file name here e.g. index.html)``` and press enter (You can also use ```git add .``` to add all files that have been modified).
+3. Type ```git commit -m "(insert a meaningful commit message here)"``` and press enter.
+4. When you're ready to push the commits, you can do so by typing ```git push``` and press enter.
+
+## Credits
+
+- I'd like to thank my mentor Brian Macharia for assisting me with the format of my code and reviews.
+
+### Media
+
+- All media has been linked to the appropriate website of where it had been taken from.
+- Vecteezy for allowing the background to be provided for free - [Space Vectors by Vecteezy](https://www.vecteezy.com/free-vector/space")
+
+### Content
+
+- I was struggling to figure out how to disable the buttons. This [W3Schools guide](https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp) helped with that.
+- I learnt how to create an element with an ID using .setAttribute() from this [Stack Overflow page](https://stackoverflow.com/questions/9422974/createelement-with-id). 
