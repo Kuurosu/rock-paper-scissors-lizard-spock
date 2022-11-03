@@ -3,6 +3,7 @@
 :root {
     --background-primary: rgb(58, 58, 91);
     --font-color: rgb(225, 225, 225);
+    --link-color: rgb(194, 115, 192);
 }
 
 * {
@@ -14,7 +15,7 @@ body {
     text-align: center;
     background-image: url('../images/space.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     color: var(--font-color);
     background-color: rgb(0, 11, 68);
 }
@@ -234,6 +235,33 @@ h2 {
     border-radius: 10px;
 }
 
+footer {
+    display: block;
+    position: absolute;
+    background: var(--background-primary);
+    width: 100%;
+    font-size: 2rem;
+    margin-left: -8px;
+}
+
+#footer-head {
+    padding-top: 5px;
+    margin: 0;
+}
+
+.footer-text {
+    font-size: 1rem;
+    color: var(--font-color);
+    margin: auto;
+    padding: 5px 0 10px 0;
+    text-decoration: none;
+}
+
+.footer-text:hover {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 500px) {
     h1 {
         font-size: 1.5rem;
@@ -302,6 +330,10 @@ h2 {
     #result {
         margin-top: 0;
         margin-bottom: 15px;
+    }
+
+    #footer-head {
+        font-size: 1.5rem;
     }
 }
 
