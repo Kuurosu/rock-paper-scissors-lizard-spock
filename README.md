@@ -48,6 +48,10 @@ Below the lives and score, is also a quick explanation of how to play the game, 
 
 ![How To Play](/media/how-to-play.png)
 
+At the bottom of the page I have included a simple "Created by Rob Sizeland" and a message underneat asking to visit my page with image of GitHub's logo next to it. This can be clicked to open a new tab to my GitHub page. It also includes a hover effect which turns a light pink upon hover and underlines the link.
+
+![Footer](/media/footer.png)
+
 ## Mockup VS Final Design
 
 Initially I planned on having the choices below the results and
