@@ -224,6 +224,16 @@ h2 {
     margin: auto;
 }
 
+.error-message {
+    background: var(--background-primary);
+    color: var(--font-color);
+    width: fit-content;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 @media screen and (max-width: 500px) {
     h1 {
         font-size: 1.5rem;
