@@ -64,7 +64,6 @@ function displayResult(playerChoice) {
  */
 function getComputerCharacter() {
     let compRandom = Math.floor(Math.random() * 5) + 1;
-    console.log(compRandom);
     let computerChoice;
     switch (compRandom) {
         case 1:
