@@ -15,22 +15,25 @@ let playerLives = 3;
 for (let choice of choices) {
     choice.addEventListener('click', function () {
         player = this.innerHTML;
-        console.log(player);
         displayResult(playerChoice);
     });
 }
 
 /**
  * This takes the player from the event listener and assigns it to the function.
- * It also runs the computerRandomNumber function to find a random number between 1-5 in which it switches to assign a string to the computer variable.
- * It then runs the checkWinner function to see who won the game. It will also add + 1 to increment the score with the id of 'score' and decrement the playerLives - 1.
+ * It also runs the computerRandomNumber function to find a random number 
+ * between 1-5 in which it switches to assign a string to the computer variable.
+ * It then runs the checkWinner function to see who won the game. It will 
+ * also add + 1 to increment the score with the id of 'score' and 
+ * decrement the playerLives - 1.
  * 
+ * Given two choices, then runs the checkWinner to replace the resultText.
  * 
- * @param {} player 
+ * @param {player} playerChoice - The users choice
+ * @param {computerCount} computerChoice - The computers choice 
  */
 
 function displayResult(playerChoice) {
-    // playerChoice.textContent = `You chose: ${player}`;
     let playerImg = document.createElement('img');
     playerImg.src = 'assets/images/' + player.toLowerCase() + '.png';
     playerImg.setAttribute('id', 'current-image');
@@ -56,7 +59,8 @@ function displayResult(playerChoice) {
 }
 
 /**
- * This creates the random 1-5 and uses switch to assign it the string of choice.
+ * This creates the random 1-5 and uses switch to assign it the string
+ * of choice.
  */
 function getComputerCharacter() {
     let compRandom = Math.floor(Math.random() * 5) + 1;
@@ -84,7 +88,9 @@ function getComputerCharacter() {
 }
 
 /**
- * This checks the playerChoice to computerChoice and finds out which one won and if the score should be incremented or lives be decremented
+ * This checks the playerChoice to computerChoice and finds out which one
+ *  won and if the score should be incremented or lives be decremented
+ * 
  * @returns result
  */
 function checkWinner(player, computerCount) {
@@ -164,7 +170,8 @@ function checkWinner(player, computerCount) {
 }
 
 /**
- * Disables all the button input. Effectively pausing the game unless the resetChoices is run.
+ * Disables all the button input. Effectively pausing the game unless
+ * the resetChoices is run.
  */
 function gameOver() {
     document.getElementById('rock').disabled = true;
@@ -180,7 +187,8 @@ function gameOver() {
 }
 
 /**
- * Creates a Play Again button which also replaces the instructions above the buttons.
+ * Creates a Play Again button which also replaces the instructions 
+ * above the buttons.
  */
 function resetChoices() {
     let reset = document.createElement('button');
